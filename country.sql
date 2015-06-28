@@ -255,9 +255,9 @@ INSERT INTO country (id, common_name, code2, code3, iso3166_id, latitude, longit
 
 ALTER TABLE country
   ADD PRIMARY KEY (id),
+  ADD UNIQUE KEY common_name (common_name),
   ADD UNIQUE KEY code3 (code3),
   ADD UNIQUE KEY code2 (code2),
-  ADD UNIQUE KEY `name` (common_name),
   ADD UNIQUE KEY iso3166_id (iso3166_id),
   ADD KEY latitude (latitude),
   ADD KEY longitude (longitude);
