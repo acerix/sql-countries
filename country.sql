@@ -7,9 +7,9 @@ CREATE TABLE country (
   latitude float DEFAULT NULL,
   longitude float DEFAULT NULL,
   PRIMARY KEY (id),
-  UNIQUE KEY code3 (code3),
-  UNIQUE KEY code2 (code2),
   UNIQUE KEY common_name (common_name),
+  UNIQUE KEY code2 (code2),
+  UNIQUE KEY code3 (code3),
   KEY latitude (latitude),
   KEY longitude (longitude)
 );
